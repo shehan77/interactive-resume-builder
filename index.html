@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR RESUME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+   
+</head>
+<body>
+    <div class="shehan">
+        <div class="header">
+            <h1>Interactive Resume Builder</h1>
+            <p>Create your resume your way</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <form id="resumeForm">
+                    <h2 class="section-title">Personal Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="github">GitHub Profile</label>
+                        <input type="url" id="github" name="github" placeholder="https://github.com/yourusername">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourusername">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="summary">Profile Summary</label>
+                        <textarea id="summary" name="summary" placeholder="Write a brief professional summary about yourself..."></textarea>
+                    </div>
+
+                    <h2 class="section-title">Skills</h2>
+                    <div class="form-group">
+                        <label for="skillInput">Add Skills</label>
+                        <input type="text" id="skillInput" placeholder="Type a skill and press Enter">
+                        <div class="skills-container" id="skillsContainer"></div>
+                    </div>
+
+                    <h2 class="section-title">Education</h2>
+                    <div class="dynamic-section" id="educationSection">
+                        <div class="dynamic-item">
+                            <div class="form-group">
+                                <label>Institution</label>
+                                <input type="text" class="education-institution" placeholder="University/School name">
+                            </div>
+                            <div class="form-group">
+                                <label>Degree</label>
+                                <input type="text" class="education-degree" placeholder="Degree/Certificate">
+                            </div>
+                            <div class="form-group">
+                                <label>Year</label>
+                                <input type="text" class="education-year" placeholder="2020-2024">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="addEducation()">+ Add Education</button>
+                    </div>
+
+                    <h2 class="section-title">Experience</h2>
+                    <div class="dynamic-section" id="experienceSection">
+                        <div class="dynamic-item">
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text" class="experience-company" placeholder="Company name">
+                            </div>
+                            <div class="form-group">
+                                <label>Position</label>
+                                <input type="text" class="experience-position" placeholder="Job title">
+                            </div>
+                            <div class="form-group">
+                                <label>Duration</label>
+                                <input type="text" class="experience-duration" placeholder="Jan 2022 - Present">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="experience-description" placeholder="Describe your role and achievements..."></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="addExperience()">+ Add Experience</button>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger" onclick="clearForm()">Clear Form</button>
+                        <button type="button" class="btn btn-success" onclick="downloadPDF()">Download PDF</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="preview-section">
+                <h2 class="section-title">Resume Preview</h2>
+                <div class="resume-preview" id="resumePreview">
+                    <div class="empty-state">
+                        <p>Start filling out the form to see your resume preview</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>
